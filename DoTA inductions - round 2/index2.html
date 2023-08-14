@@ -1,0 +1,671 @@
+<html>
+  <head>
+    <title>DoTA inductions - round 2</title>
+  </head>
+  <style>
+    .hide{
+      display: none;
+    }
+    .page1,.page2{
+      overflow: hidden;
+      width: 1440px;
+      height: 1024px;
+    }
+    .backgroundLeft{
+      background-image: url(Rectangle\ 5\ \(1\).png);
+      width: 618px;
+      height: 945px;
+      flex-shrink: 0;
+      border: none;
+      position: absolute;
+      top: 79px;
+      left: 0;
+    }
+    .backgroundRight{
+      background: url(wp7661629\ 1.png), lightgray 50% / cover no-repeat;      
+      width: 822px;
+      height: 906px;
+      flex-shrink: 0;
+      position: absolute;
+      top: 118px;
+      left: 618px;
+      border: none;
+    }
+    .navbar{
+      width: 1440px;
+      height: 118px;
+      flex-shrink: 0;
+      border-radius: 0px 0px 0px 22px;
+      background: #170A0A;
+      box-shadow: 0px 86px 44px -6px #00000A inset;
+      backdrop-filter: blur(28px);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 4;
+    }
+    .icon{
+      position: absolute;
+      top: 45px;
+      left: 45px;
+      cursor: pointer;
+    }
+    .atmoslogo{
+      background: url(Rectangle\ 3.png); 
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 289px;
+      height: 93px;
+      flex-shrink: 0;
+      position: absolute;
+      top: 25px;
+      left: 84px;
+      cursor: pointer;
+    }
+    .navoptions{
+      width: 154px;
+      height: 39px;
+      flex-shrink: 0;
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      display: inline-block;
+      margin: 0;
+      position: relative;
+      top: 40px;
+      left: 745px;
+      cursor: pointer;
+    }
+    .myaccount{
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .register{
+      width: 981px;
+      height: 904px;
+      flex-shrink: 0;
+      border-radius: 56px;
+      border: 1px solid #000;
+      background: rgba(18, 16, 16, 0.95);
+      filter: blur(0px);
+      position: absolute;
+      top: 118px;
+      left: 457px;
+    }
+    .rocket{
+      background-image: url(Rectangle\ 6.png);
+      background-size: 750px;
+      background-repeat: no-repeat;
+      background-position:center;
+      height: 550px;
+      width: 900px;
+      position: absolute;
+      top: 525px;
+      left: 0px;
+    }
+    .crAcc{
+      width: 481px;
+      height: 89px;
+      flex-shrink: 0;
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      left: 94px;
+      top: 94px;
+    }
+    .firstname{
+      width: 155px;
+      height: 39px;
+      flex-shrink: 0;
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      top: 236px;
+      left: 133px;
+    }
+
+    .R8{
+      width: 342px;
+      height: 77px;
+      flex-shrink: 0;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.06);
+      display: inline-block;
+      position: absolute;
+      left: 115px;
+      top: 247px;
+    }
+    .lastname{
+      width: 155px;
+      height: 39px;
+      flex-shrink: 0;
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      top: 236px;
+      left: 575px;
+    }
+    .R13{
+      width: 342px;
+      height: 77px;
+      flex-shrink: 0;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.06);
+      position: absolute;
+      top: 247px;
+      left: 551px;
+    }
+    .email{
+      width: 348px;
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      top: 416px;
+      left: 161px;
+    }
+    .R14{
+      width: 655px;
+      height: 77px;
+      flex-shrink: 0;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.06);
+      position: absolute;
+      top: 430px;
+      left: 117px;
+    }
+    .pwd{
+      width: 155px;
+      height: 39px;
+      flex-shrink: 0;
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      top: 607px;
+      left: 335px;
+    }
+    .R15{
+      width: 513px;
+      height: 77px;
+      flex-shrink: 0;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.06);
+      position: absolute;
+      top: 621px;
+      left: 307px;
+    }
+    .regbtn{
+      width: 342px;
+      height: 77px;
+      flex-shrink: 0;
+      border-radius: 30px;
+      background: linear-gradient(180deg, rgba(61, 18, 234, 0.38) 47.92%, rgba(66, 64, 159, 0.20) 91.15%);
+      position: absolute;
+      top: 743px;
+      left: 307px;
+      
+    }
+    .reg{
+      width: 155px;
+      height: 39px;
+      flex-shrink: 0;
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      top: 19px;
+      left: 105px;
+    }
+    .login{
+      width: 376px;
+      height: 39px;
+      flex-shrink: 0;
+      color: rgba(255, 255, 255, 0.92);
+      font-family: sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      top: 838px;
+      left: 321px;
+    }
+    .R23{
+      width: 438px;
+      height: 906px;
+      flex-shrink: 0;
+      border: 1px solid #000;
+      background: rgba(0, 0, 0, 0.88);
+      position: absolute;
+      z-index: 7;
+      left: 3px;
+      top: 118px;
+    }
+    .bg{
+      background-image: url(wp7661629\ 1.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 1440px;
+      height: 947px;
+      flex-shrink: 0;  
+      position: absolute;
+      left: 0;
+      top: 79px;
+      }
+    .navbar2{
+      width: 1440px;
+      height: 118px;
+      flex-shrink: 0;
+      border-radius: 0px 0px 0px 22px;
+      background: #170A0A;
+      box-shadow: 0px 86px 44px -6px #00000A inset;
+      backdrop-filter: blur(28px);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 6;
+    }
+    .atmoslogo2{
+      width: 289px;
+      height: 93px;
+      flex-shrink: 0;
+      background: url(Rectangle\ 3.png);
+      position: absolute;
+      top: 25px;
+      left: 54px;
+      cursor: pointer;
+    }
+    .navoptions2{
+      width: 154px;
+      height: 39px;
+      flex-shrink: 0;
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      display: inline-block;
+      margin: 0;
+      position: relative;
+      top: 40px;
+      left: 704px;
+      cursor: pointer;
+    }
+    .myaccount2{
+      width: 154px;
+      height: 39px;
+      flex-shrink: 0;
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin: 0;
+      position: absolute;
+      top: 44px;
+      left: 1218px;
+    }
+    .caprog{
+      width: 338px;
+      height: 90px;
+      flex-shrink: 0;
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      top: 52px;
+      left: 51px;
+    }
+    .tasks{
+      width: 271px;
+      height: 63px;
+      flex-shrink: 0;
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      top: 286px;
+      left: 51px;
+    }
+    .profile{
+      width: 271px;
+      height: 63px;
+      flex-shrink: 0;
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      left: 51px;
+      top: 391px;
+    }
+    .contact{
+      width: 271px;
+      height: 63px;
+      flex-shrink: 0;
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      top: 510px;
+      left: 51px;
+    }
+    .R19{
+      width: 1013px;
+      height: 906px;
+      flex-shrink: 0;
+      background: rgba(34, 19, 78, 0.84);
+      position: absolute;
+      overflow: hidden;
+      overflow-y: scroll;
+      top: 118px;
+      left: 426px;
+      z-index: 8;
+    }
+    .ldbrd{
+      width: 376px;
+      height: 111px;
+      flex-shrink: 0;
+      color: #FFF;
+      text-shadow: 0px 4px 4px #000;
+      font-family: sans-serif;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      top: 47px;
+      left: 53px;
+    }
+    .score{
+      width: 389px;
+      height: 151px;
+      flex-shrink: 0;
+      border-radius: 47px;
+      border: 1px solid #000;
+      background: rgba(7, 3, 33, 0.54);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.50);
+      position: absolute;
+      top: 142px;
+      left: 40px;
+    }
+    .yscore{
+      color: rgb(84,80,104);
+      font-size: 2.8em;
+      font-weight: 600;
+      font-family: sans-serif;
+      width: 200px;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      line-height: 60px;
+    }
+    .table{
+      width: 1002px;
+      height: 78px;
+      flex-shrink: 0;
+      border-radius: 19px;
+      background: #000;
+      position: absolute;
+      left: 9px;
+      top: 329px;
+      z-index: 5;
+    }
+    .rank{
+      width: 111px;
+      height: 39px;
+      flex-shrink: 0;
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      top: 20px;
+      left: 37px;
+    }
+    .line1{
+      width: 1px;
+      height: 78px;
+      background: #FFF;
+      position: absolute;
+      left: 148px;
+    }
+    .name{
+      width: 111px;
+      height: 39px;
+      flex-shrink: 0;
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      top: 20px;
+      left: 186px;
+    }
+    .line2{
+      width: 1px;
+      height: 78px;
+      background: #FFF;
+      position: absolute;
+      left: 490px;
+    }
+    .score-t{
+      width: 111px;
+      height: 39px;
+      flex-shrink: 0;
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      position: absolute;
+      top: 20px;
+      left: 528px;
+    }
+    .line3{
+      width: 1px;
+      height: 78px;
+      background: #FFF;
+      position: absolute;
+      left: 753px;
+    }
+    .bline1{
+      width: 1px;
+      height: 554px;
+      background: #000;
+      position: absolute;;
+      top: 394px;
+      left: 157px;
+    }
+    .bline2{
+      width: 1px;
+      height: 554px;
+      background: #000;
+      position: absolute;
+      top: 394px;
+      left: 499px;
+    }
+    .bline3{
+      width: 1px;
+      height: 554px;
+      background: #000;
+      position: absolute;
+      top: 394px;
+      left: 762px;
+    }
+    .tabbox{
+      width: 1002px;
+      height: 86px;
+      flex-shrink: 0;
+      border-radius: 21px;
+      background: rgba(9, 1, 1, 0.48);
+      margin: 3px;
+      position: relative;
+      z-index: 4;
+      top: 410px;
+      left: 6px;
+    }
+    .num{
+      width: 47px;
+      height: 65px;
+      flex-shrink: 0;
+      color: #FFF;
+      font-family: sans-serif;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      position: absolute;
+      top: 21px;
+      left: 54px;
+    }
+    /*.last{
+      height: 50px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }*/
+  </style>
+  <body>
+    <div class="page1 ">
+      <div class="navbar">
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
+            <path d="M0 0V4.19666H28.041V0H0ZM0 12.4641V16.6607H28.041V12.4641H0ZM0 25.0541V29.2507H28.041V25.0541H0Z" fill="#FFF7F7"/>
+          </svg> 
+        </div>
+        <div class="atmoslogo"></div>
+        <p class="navoptions">Events</p>
+        <p class="navoptions">Schedule</p>
+        <p class="navoptions">Sponsors</p>
+        <p class="navoptions myaccount">My Account</p>
+      </div>
+      <div class="backgroundLeft "></div>
+      <div class="backgroundRight "></div>
+      <div class="register ">
+        <p class="crAcc">Create Account</p>
+        <p class="firstname">First Name</p>
+        <div class="R8"></div>
+        <p class="lastname">Last Name</p>
+        <div class="R13"></div>
+        <p class="email">Email</p>
+        <div class="R14"></div>
+        <p class="pwd">Password</p>
+        <div class="R15"></div>
+        <div class="regbtn">
+          <text class="reg">Register</text>
+        </div>
+        <text class="login" >Already have account?login</text>
+      </div>
+        <div class="rocket "></div>      
+    </div>
+    <div class="page2 hide">
+      <div class="navbar2">
+        <div class="atmoslogo2"></div>
+        <p class="navoptions2">Events</p>
+        <p class="navoptions2">Schedule</p>
+        <p class="navoptions2">Sponsors</p>
+        <p class="navoptions2 myaccount2">My Account</p>
+      </div>
+      <div class="bg"></div>
+      <div class="R23">
+        <p class="caprog">CA PROGRAM ATMOS- BITS HYD</p>
+        <p class="tasks">TASKS</p>
+        <p class="profile">PROFILE</p>
+        <p class="contact">CONTACT</p>
+      </div>
+      <div class="R19">
+        <text class="ldbrd">LEADERBOARD</text>
+        <div class="score">
+          <text class="yscore">YOUR SCORE :</text>
+        </div>
+        <div class="table">
+          <text class="rank">RANK</text>
+          <div class="line1"></div>
+          <text class="name">NAME</text>
+          <div class="line2"></div>
+          <text class="score-t">SCORE</text>
+          <div class="line3"></div>
+        </div>
+        <div class="bline1"></div>
+        <div class="bline2"></div>
+        <div class="bline3"></div>
+        <div class="tabbox">
+          <text class="num">1.</text>
+        </div>
+        <div class="tabbox">
+          <text class="num">2.</text>
+        </div>
+        <div class="tabbox">
+          <text class="num">3.</text>
+        </div>
+        <div class="tabbox"></div>
+        <div class="tabbox"></div>
+        <div class="tabbox last"></div>
+
+      </div>
+      </div>
+
+    <script>
+      const menu = document.querySelector(".icon");
+      const p1 = document.querySelector(".page1");
+      const p2 = document.querySelector(".page2");
+      const home = document.querySelector(".atmoslogo2");
+      menu.addEventListener("click",function(){
+        p1.classList.add("hide");
+        p2.classList.remove("hide");
+      })
+      home.addEventListener("click",function(){
+        p2.classList.add("hide");
+        p1.classList.remove("hide");
+      })
+    </script>
+  </body>
+</html>
